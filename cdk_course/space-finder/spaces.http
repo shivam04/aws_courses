@@ -1,2 +1,14 @@
-GET https://kgtuvjl1x2.execute-api.ap-south-1.amazonaws.com/prod/spaces
+GET https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces
+###
+
+POST https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces
+Content-Type: application/json
+
+{
+    "location": "Mumbai"
+}
+###
+
+
+GET https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces?id=343345
 ###
