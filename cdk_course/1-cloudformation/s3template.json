@@ -1,0 +1,31 @@
+{
+    "Resources": {
+        "HelloBucket": {
+            "Type": "AWS::S3::Bucket"
+        },
+        "PublicReadBucketPolicy": {
+            "Type": "AWS::S3::BucketPolicy",
+            "Properties": {
+                "Bucket": {
+                    "Ref": "HelloBucket"
+                },
+                "PolicyDocument": {
+                    "Effect": "Allow",
+                    "Principal": "*",
+                    "Action": "s3:GetObject",
+                    "Resource": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                "arn:aws:s3:::",
+                                {
+                                    "Ref": "HelloBucket"
+                                }
+                            ]
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
