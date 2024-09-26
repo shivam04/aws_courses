@@ -5,10 +5,24 @@ POST https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces
 Content-Type: application/json
 
 {
-    "location": "Mumbai"
+    "location": "Lucknow",
+    "name": "Lively"
 }
 ###
 
 
-GET https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces?id=343345
+GET https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces?id=47719944-9626-461d-b789-b89fa6c329d5
+###
+
+PUT https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces?id=47719944-9626-461d-b789-b89fa6c329d5
+Content-Type: application/json
+
+{
+    "location": "Kanpur",
+    "name": "Best Place"
+}
+###
+
+
+DELETE https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces?id=47719944-9626-461d-b789-b89fa6c329d5
 ###
