@@ -1,7 +1,12 @@
-GET https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces
+@url = https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod
+@token = eyJraWQiOiJzd1RISndNTDAzaUtCSGllWkJFTFF2VTVXbHZ5UE5nMWtZYkpBR2IxWG5ZPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI1MWYzY2RiYS00MGQxLTcwMTItM2EwZS0zMDMyNzdiNWEyNzQiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoLTEuYW1hem9uYXdzLmNvbVwvYXAtc291dGgtMV9TdFNpSzkxSEoiLCJjb2duaXRvOnVzZXJuYW1lIjoic2h2bXNuaGEiLCJvcmlnaW5fanRpIjoiMGQxZGM4OWEtMDcxZi00OTEzLTk0YWQtNzY2ZGMxOWU0ZTgzIiwiYXVkIjoiNHYydWUxcDduaGdnMDdrN2RpcGgydWlybGgiLCJldmVudF9pZCI6IjkwYmNlNTczLWYzM2MtNGJlMS05MDMyLWE2ZjZhZjE5ZjYyMyIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNzI3NDM0MDczLCJleHAiOjE3Mjc0Mzc2NzMsImlhdCI6MTcyNzQzNDA3MywianRpIjoiOTg1YTgyNzktMzc3My00MGQ1LWIyYWMtMjdjMWYyMTlkZWIxIiwiZW1haWwiOiJzaW5oYXNoaXZhbTA0QGdtYWlsLmNvbSJ9.i0JEs6XbIud0XCCbP6C8LRq_py1HIwdiaDAF-6JN_2O1yGtiV5iDwG5Z-IrIhspvb09po2wPMx-nmzrdqsBE3UroIkPRYyafN87HvCz5VX_Inq2mucmzgbbrvftpIFfV4zkL9JcmjU-xqz4wHTtHBJmjlJeMEwAR89Iq7CIi46b7-wGwk1lLXHShMrlr2wiaFU-hyE8Dx68I-ZaqR3Lz1hrXmbI9HogidgIK_dE8Z0-BG6w89p0Okxpeu3H7Y5xt9Sqzga4cJ---AUGHJQdSQwQrDr8Tid5KbR2dMXDFNwW_MiHtV7NVqzwpSW3V0FaXnCIteHzlH8GLN_NifWpvRA
+
+GET {{url}}/spaces
+Authorization: {{token}}
 ###
 
-POST https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces
+POST {{url}}/spaces
+Authorization: {{token}}
 Content-Type: application/json
 
 {
@@ -11,18 +16,20 @@ Content-Type: application/json
 ###
 
 
-GET https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces?id=47719944-9626-461d-b789-b89fa6c329d5
+GET {{url}}/spaces?id=a561f7d2-9209-4c09-8b24-7a212aad6329
+Authorization: {{token}}
 ###
 
-PUT https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces?id=47719944-9626-461d-b789-b89fa6c329d5
+PUT {{url}}/spaces?id=a561f7d2-9209-4c09-8b24-7a212aad6329
+Authorization: {{token}}
 Content-Type: application/json
 
 {
-    "location": "Kanpur",
     "name": "Best Place"
 }
 ###
 
 
-DELETE https://e2pma61j19.execute-api.ap-south-1.amazonaws.com/prod/spaces?id=47719944-9626-461d-b789-b89fa6c329d5
+DELETE {{url}}/spaces?id=a561f7d2-9209-4c09-8b24-7a212aad6329
+Authorization: {{token}}
 ###
