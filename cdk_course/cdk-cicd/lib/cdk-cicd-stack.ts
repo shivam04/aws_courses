@@ -1,5 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
-import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
+import { CodeBuildStep, CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
 import { Construct } from 'constructs';
 import { PipelineStage } from './PipelineStage';
 
@@ -25,5 +25,14 @@ export class CdkCicdStack extends cdk.Stack {
       stageName: 'test'
     }));
     
+    testStage.addPre(new CodeBuildStep('unit-tests', {
+      commands: [
+        'cd cdk_course',
+        'cd cdk-cicd',
+        'npm ci',
+        'npm test'
+      ]
+    }))
+
   }
 }
