@@ -16,7 +16,7 @@ export class CdkCicdStack extends cdk.Stack {
           'npm ci',
           'npx cdk synth'
         ],
-        primaryOutputDirectory: 'cdk-course/cdk-cicd/cdk.out'
+        primaryOutputDirectory: 'cdk_course/cdk-cicd/cdk.out'
       })
     });
     
