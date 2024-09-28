@@ -11,11 +11,12 @@ export class CdkCicdStack extends cdk.Stack {
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('shivam04/aws_courses', 'cicd-practice'),
         commands: [
+          'cd cdk_course',
           'cd cdk-cicd',
           'npm ci',
           'npx cdk synth'
         ],
-        primaryOutputDirectory: 'cdk-cicd/cdk.out'
+        primaryOutputDirectory: 'cdk-course/cdk-cicd/cdk.out'
       })
     });
     
