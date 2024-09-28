@@ -1,0 +1,19 @@
+psql -U postgres -h [endpoint]
+
+
+SELECT datname FROM pg_database;
+
+create database mydb;
+
+\c mydb;
+
+CREATE TABLE customer (
+ id SERIAL PRIMARY KEY,
+ name VARCHAR(50)
+);
+
+
+INSERT INTO customer (name)
+VALUES
+  ('Sam'),
+  ('Mike');
