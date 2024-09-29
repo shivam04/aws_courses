@@ -1,0 +1,5 @@
+services:
+  jmeter:
+    image: vinsdocker/aws-autoscale
+    environment:
+      - APP_DOMAIN=d3rl09w5fvhj09.cloudfront.net
